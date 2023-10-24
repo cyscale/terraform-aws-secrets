@@ -4,7 +4,7 @@ data "aws_secretsmanager_random_password" "this" {
 }
 
 resource "aws_secretsmanager_secret" "this" {
-  name = "neo4j-password"
+  name = var.secret_name
 }
 
 resource "aws_secretsmanager_secret_version" "this" {
